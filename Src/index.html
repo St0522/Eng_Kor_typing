@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Practice</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main-container">
+    <div id="file-upload-container">
+      <h2 style="color: #fff; margin-bottom: 20px;">타이핑 연습</h2>
+      <input type="file" id="file-input" accept=".csv" />
+      <button id="file-upload-button" onclick="document.getElementById('file-input').click();">
+        CSV 파일 선택
+      </button>
+      <div id="file-info">
+        <div style="margin-bottom: 10px;">
+          <strong>CSV 형식:</strong> english,korean
+        </div>
+        <div style="font-size: 12px; line-height: 1.4;">
+          <div><strong>기본 예시:</strong></div>
+          <div>Hello world,안녕하세요</div>
+          <div>Good morning,좋은 아침</div>
+          <br>
+          <div><strong>쉼표가 포함된 경우 (따옴표 사용):</strong></div>
+          <div>"Hello, how are you?","안녕하세요, 어떻게 지내세요?"</div>
+          <div>"Yes, I agree","네, 동감합니다"</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="sentence-selector" class="hidden">
+      <label for="sentence-select" style="color: #fff;">단어/문장 선택:</label>
+      <select id="sentence-select"></select>
+      <button id="restart-button">다시 시작</button>
+      <button id="random-button">랜덤 단어/문장</button>
+    </div>
+    
+    <div id="container" tabindex="0" aria-live="polite" class="hidden">
+      <div id="text-container" aria-label="English typing text"></div>
+      <div id="korean-container" aria-label="Korean typing text" style="display: none;"></div>
+      <div id="cursor"></div>
+    </div>
+    
+    <div id="progress-info" class="hidden">
+      <span id="progress-text">영어 타이핑 중...</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

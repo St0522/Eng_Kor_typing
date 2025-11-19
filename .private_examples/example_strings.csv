@@ -1,0 +1,5 @@
+"The integration of vehicle networks and Edge AI enables transformative applications across multiple domains.","차량 네트워크와 엣지 AI 통합은 다양한 도메인에서 혁신적인 응용을 가능하게 한다."
+"Modern vehicles integrate multiple communication protocols, each specifically optimized for distinct automotive domains.","현대 차량은 서로 다른 자동차 영역에 최적화된 다중 통신 프로토콜을 통합한다."
+"In this section, we firstly summarize existing approaches and background knowledge of instruction embedding.","본 절에서는 명령어 임베딩에 관한 기존 접근법과 관련 배경 지식을 먼저 정리한 후, 기존 접근법에서 발생하는 미해결 문제들을 논의한다."
+"Contrast to the existing approaches, our goal is to develop a pretrained assembly language model for general-purpose instruction representation learning.","기존 접근 방식과 달리, 본 연구의 목표는 범용 명령어 표현 학습을 위한 사전 학습 어셈블리 언어 모델을 개발하는 것이다."
+"We trained the neural network model with early stopping, where the number of training epochs was found on the validation set.","우리는 신경망 모델을 조기 종료 기법으로 훈련시켰으며, 학습 에포크 수는 검증 세트에서 결정되었다."
