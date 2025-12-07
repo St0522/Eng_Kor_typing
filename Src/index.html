@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Typing Practice</title>
+  <title>타이핑 연습 - HTMX</title>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -33,14 +34,30 @@
     
     <div id="sentence-selector" class="hidden">
       <label for="sentence-select" style="color: #fff;">단어/문장 선택:</label>
-      <select id="sentence-select"></select>
-      <button id="restart-button">다시 시작</button>
-      <button id="random-button">랜덤 단어/문장</button>
+      <select id="sentence-select" 
+              hx-get="#" 
+              hx-trigger="change" 
+              hx-swap="none">
+      </select>
+      <button class="control-button" 
+              hx-get="#" 
+              hx-trigger="click" 
+              hx-swap="none"
+              id="restart-button">
+        다시 시작
+      </button>
+      <button class="control-button" 
+              id="random-button"
+              hx-get="#" 
+              hx-trigger="click" 
+              hx-swap="none">
+        랜덤 단어/문장
+      </button>
     </div>
     
-    <div id="container" tabindex="0" aria-live="polite" class="hidden">
-      <div id="text-container" aria-label="English typing text"></div>
-      <div id="korean-container" aria-label="Korean typing text" style="display: none;"></div>
+    <div id="container" tabindex="0" class="hidden">
+      <div id="text-container"></div>
+      <div id="korean-container" style="display: none;"></div>
       <div id="cursor"></div>
     </div>
     

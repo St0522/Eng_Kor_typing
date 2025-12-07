@@ -1,159 +1,160 @@
-    /* 전체 배경 및 기본 텍스트 스타일 설정 */
-    body {
-      margin: 0;
-      background-color: #212121;
-      color: #888;
-      font-family: 'Pretendard', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    
-    #file-upload-container {
-      text-align: center;
-      padding: 40px;
-      border: 2px dashed #555;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      transition: all 0.3s ease;
-    }
-    
-    #file-upload-container:hover {
-      border-color: #888;
-      background-color: rgba(255, 255, 255, 0.05);
-    }
-    
-    #file-input {
-      display: none;
-    }
-    
-    #file-upload-button {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    
-    #file-upload-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-    
-    #file-info {
-      margin-top: 15px;
-      font-size: 14px;
-      color: #bbb;
-    }
-    
-    #sentence-selector {
-      margin: 20px 0;
-      text-align: center;
-    }
-    
-    #sentence-select {
-      background-color: #333;
-      color: white;
-      border: 1px solid #555;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      margin: 0 10px;
-    }
-    
-    #restart-button, #random-button {
-      background-color: #444;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-      margin-left: 10px;
-    }
-    
-    #restart-button:hover, #random-button:hover {
-      background-color: #555;
-    }
-    
-    #random-button {
-      background-color: #667eea;
-    }
-    
-    #random-button:hover {
-      background-color: #5a6fd8;
-    }
-    
-    #main-container {
-      width: 100%;
-      max-width: 1600px;
-    }
-    
-    #container {
-      position: relative;
-      outline: none;
-      margin-top: 20px;
-      text-align: center;
-    }
-    
-    #text-container {
-      font-size: 40px;
-      font-weight: bold;
-      white-space: pre-wrap;
-      word-break: break-word;
-      line-height: 1.4;
-      text-align: center;
-    }
-    
-    #text-container span {
-      color: #888;
-      display: inline-block;
-    }
-    
-    #cursor {
-      position: absolute;
-      width: 2px;
-      background: white;
-      top: 0;
-      transition: height 0.1s;
-      z-index: 10;
-    }
-    
-    #korean-container {
-      font-size: 40px;
-      font-weight: bold;
-      white-space: pre-wrap;
-      word-break: break-word;
-      line-height: 1.4;
-      margin-top: 20px;
-      text-align: center;
-    }
-    
-    #korean-container span {
-      color: #888;
-      display: inline-block;
-    }
-    
-    .composing {
-      color: #aaa !important;
-      opacity: 0.7;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .hidden {
-      display: none;
-    }
-    
-    #progress-info {
-      text-align: center;
-      margin-top: 20px;
-      color: #bbb;
-      font-size: 14px;
-    }
+/* 전체 배경 및 기본 텍스트 스타일 설정 */
+body {
+  margin: 0;
+  background-color: #212121;
+  color: #888;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#file-upload-container {
+  text-align: center;
+  padding: 40px;
+  border: 2px dashed #555;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+#file-upload-container:hover {
+  border-color: #888;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#file-input {
+  display: none;
+}
+
+#file-upload-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#file-upload-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+#file-info {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+#sentence-selector {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#sentence-select {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.control-button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+.control-button:hover {
+  background-color: #555;
+}
+
+#random-button {
+  background-color: #667eea;
+}
+
+#random-button:hover {
+  background-color: #5a6fd8;
+}
+
+#main-container {
+  width: 100%;
+  max-width: 1600px;
+}
+
+#container {
+  position: relative;
+  outline: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#text-container {
+  font-size: 40px;
+  font-weight: bold;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#text-container span {
+  color: #888;
+  display: inline-block;
+}
+
+#cursor {
+  position: absolute;
+  width: 2px;
+  background: white;
+  top: 0;
+  transition: all 85ms cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: 10;
+}
+
+#korean-container {
+  font-size: 40px;
+  font-weight: bold;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.4;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#korean-container span {
+  color: #888;
+  display: inline-block;
+}
+
+.composing {
+  color: #aaa !important;
+  opacity: 0.7;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+#progress-info {
+  text-align: center;
+  margin-top: 20px;
+  color: #bbb;
+  font-size: 14px;
+}
